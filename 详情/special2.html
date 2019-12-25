@@ -1,0 +1,272 @@
+!
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>bighomewoork</title>
+	<link rel="stylesheet" type="text/css" href="select.css">
+</head>
+<body>
+<div id="most">
+        <div class="header">
+            <div id="black"></div>
+            <div class="header-nav">
+                <a class="header-logo" href="蛋糕首页.html">
+                    <div class="ppp">
+                        <img src="images/logo.png" alt="logo" class="logo">
+                    </div>
+                </a>
+                <ul class="nav-box">
+                    <li><a href="蛋糕首页.html">首页</a></li>
+                    <li><a href="敬请期待.html" target="_blank">蛋糕</a></li>
+                    <li><a href="敬请期待.html" target="_blank">奶油</a></li>
+                    <li><a href="敬请期待.html" target="_blank">巧克力</a></li>
+                    <li><a href="敬请期待.html" target="_blank">甜点</a></li>
+                    <li><a href="敬请期待.html" target="_blank">全国送</a></li>
+                </ul>
+            </div>
+           
+        </div>
+
+        <div id="bg">
+            <div id="box">
+                <div id="img1">
+                    <img src="images/cm1.jpg" width="420" height="400" id="Simg"/>
+                    <div id="slider"></div>
+                </div>
+                
+                <div id="img2">
+                    <img src="images/cm1.jpg"  id="Bimg"/>
+                </div>
+            
+            </div>
+            <div id="menu">
+                <p id="p1">草莓奶油蛋糕</p>
+                <p id="p2">价格：￥199  ￥299 ￥399</p>
+                <p id="p2">尺寸：8寸 10寸 12寸</p>
+
+            </div>
+            <div id="smallimg">
+                <img id="small" src="images/cm2.jpg">
+                <img id="small" src="images/cm3.jpg">
+                <img id="small" src="images/cm3.jpg">
+
+                
+            </div>
+        </div>
+        <div id="refer">
+            <div id="rtitle">
+                <p id="rp1">详情说明</p>
+                <p id="rp2">Detail  desc</p>
+            </div>
+            <div id="introduce">
+                    <p>成分：  草莓奶油蛋糕，经典海绵蛋糕胚+草莓奶油（含新鲜草莓果肉）叠层，表层新鲜蓝莓+新鲜草莓装饰。</p>
+                    <p>附送：  免费送一次性刀、叉、盘、蜡烛一套以及精美贺卡，代写您的祝福。</p>
+                    <p>说明：  蛋糕乃手工制作产品，不同的糕点师对图片上花型的理解不同以及制作手工不同，另外受当地原料因素等原因影响，当某些材料和颜色缺乏时，我们会以相近的替代，收货人实际收到的产品可能与网页上看到的图片存在一些差异。</p>
+                    <p>配送：  全国（可配送至全国1000多城市，市区免配送费）</p>
+            </div>
+        </div>
+    </div>
+	<div class="bottom">
+		<ul class="bottom1">
+			<li><img src="imgs/f1.png">
+				<p class="p1">新鲜上门</p>
+				<p class="p2">服务商100%实名认证</p>
+			</li>
+			<img src="imgs/5.jpg">
+			<li><img src="imgs/f2.png">
+				<p class="p1">价格保障</p>
+				<p class="p2">服务商100%实名认证</p>
+			</li>
+			<img src="imgs/5.jpg">
+			<li><img src="imgs/f3.png">
+				<p class="p1">好评如潮</p>
+				<p class="p2">服务商100%实名认证</p>
+			</li>
+			<img src="imgs/5.jpg">
+			<li><img src="imgs/f4.png">
+				<p class="p1">闪电配送</p>
+				<p class="p2">服务商100%实名认证</p>
+			</li>
+		</ul>
+	</div>
+	<div class="last">
+        <span >
+            <a href="#">首页&nbsp&nbsp&nbsp</a>|&nbsp&nbsp
+            <a href="#">工商代理&nbsp&nbsp&nbsp</a>|&nbsp&nbsp
+            <a href="#">财务代记账&nbsp&nbsp&nbsp</a>|&nbsp&nbsp
+            <a href="#">股权交易与变更&nbsp&nbsp&nbsp</a>|&nbsp&nbsp
+            <a href="#">企业贷款&nbsp&nbsp&nbsp</a>|&nbsp&nbsp
+            <a href="#">办公室租赁&nbsp&nbsp&nbsp</a>|&nbsp&nbsp
+            <a href="#">社保基金代理&nbsp&nbsp&nbsp</a>
+            <a href="#">法律服务&nbsp&nbsp&nbsp</a>
+            <p class="last2">© 2019-2020 原麦公司版权所有</p>
+        </span>
+    </div>
+</body>
+<script>
+    var box = document.getElementById("box");
+    var img1 = document.getElementById("img1");
+    var img2 = document.getElementById("img2");
+    var Simg = document.getElementById("Simg");
+    var Bimg = document.getElementById("Bimg");
+    var slider = document.getElementById("slider");
+    var smallpic = document.getElementById("smallimg");
+    var imgList =  smallimg.getElementsByTagName("img");
+
+    //大小图切换
+    for(var i = 0; i < imgList.length; i++) {
+         imgList[i].onclick = function() {
+             for(var i = 0; i < imgList.length; i++) {
+                 if(imgList[i].hasAttribute("class")) {
+                    imgList[i].removeAttribute("class");
+                 }
+             }
+             this.setAttribute("class", "pb");
+             var imgSrc = this.getAttribute("src");
+             Simg.setAttribute("src", imgSrc);
+             Bimg.setAttribute("src", imgSrc);
+             this.setAttribute("index", 1);
+         }
+     }
+
+    
+     //遮罩层的宽高
+    slider.style.width=(img1.offsetWidth/img2.offsetWidth)*img2.clientWidth*2+"px";
+    slider.style.height=(img1.offsetHeight/img2.offsetHeight)*img2.clientHeight*2+"px";
+    // 定义遮罩层最大边距，也就是最大移动距离
+    var maxW = Simg.clientWidth - slider.offsetWidth;
+    var maxH = Simg.clientHeight - slider.offsetHeight;
+
+
+    img1.onmouseover = function(){
+        slider.style.display = "block";
+        img2.style.display = "block";
+        
+    }
+    img1.onmouseout=function(){
+        slider.style.display = "none";
+        img2.style.display ="none";
+    }  
+ 
+    img1.onmousemove=function(e){
+        var x=e.pageX;
+        var y= e.pageY;
+        var boxLeft=box.offsetLeft;
+        var boxTop=box.offsetTop;
+        var sliderWidth=slider.offsetLeft;
+        var sliderHeight=slider.offsetHeight;
+
+    // 定义两个变量 让鼠标位置一直处于遮罩层位置中间 
+
+    // 遮罩层位置
+		slider.style.left = (x-boxLeft-box.clientLeft-sliderWidth/2)+"px";
+    slider.style.top = (y-boxTop-box.clientTop-sliderHeight/2)+"px";
+    var sliderLeft=x-boxLeft-sliderWidth/2;
+    var sliderHeight=y-boxTop-sliderHeight/2;
+    if(sliderLeft<=0){
+      sliderLeft=0;
+    }
+    else if(sliderLeft>=(img1.offsetWidth-slider.offsetWidth)){
+      sliderLeft = img1.offsetWidth-slider.offsetWidth;
+    }
+    if(sliderHeight<=0){
+      sliderHeight=0;
+    }
+    else if(sliderHeight>=(img1.offsetHeight-slider.offsetHeight)){
+      sliderHeight = img1.offsetHeight-slider.offsetHeight;
+    }
+
+    var nLeft = Math.min(maxW,Math.max(0,(x-boxLeft-sliderWidth/2)));
+    var nTop = Math.min(maxH,Math.max(0,(y-boxTop-sliderHeight/2)));
+
+    slider.style.left = nLeft + "px";
+    slider.style.top = nTop+"px";
+
+    Bimg.style.left = -(Bimg.offsetWidth-img2.clientWidth)*(nLeft/(Simg.clientWidth-slider.offsetWidth))+"px";
+    Bimg.style.top = -(Bimg.offsetHeight-img2.clientHeight)*(nTop/(Simg.clientHeight-slider.offsetHeight))+"px";
+  }
+
+    //背景图
+        !
+        function() {
+            function n(n, e, t) {
+                return n.getAttribute(e) || t
+            }
+            function e(n) {
+                return document.getElementsByTagName(n)
+            }
+            function t() {
+                var t = e("script"),
+                o = t.length,
+                i = t[o - 1];
+                return {
+                    l: o,
+                    z: n(i, "zIndex", -1),
+                    o: n(i, "opacity", .5),
+                    c: n(i, "color", "0,0,0"),
+                    n: n(i, "count", 99)
+                }
+            }
+            function o() {
+                a = m.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+                c = m.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+            }
+            function i() {
+                r.clearRect(0, 0, a, c);
+                var n, e, t, o, m, l;
+                s.forEach(function(i, x) {
+                    for (i.x += i.xa, i.y += i.ya, i.xa *= i.x > a || i.x < 0 ? -1 : 1, i.ya *= i.y > c || i.y < 0 ? -1 : 1, r.fillRect(i.x - .5, i.y - .5, 1, 1), e = x + 1; e < u.length; e++) n = u[e],
+                    null !== n.x && null !== n.y && (o = i.x - n.x, m = i.y - n.y, l = o * o + m * m, l < n.max && (n === y && l >= n.max / 2 && (i.x -= .03 * o, i.y -= .03 * m), t = (n.max - l) / n.max, r.beginPath(), r.lineWidth = t / 2, r.strokeStyle = "rgba(" + d.c + "," + (t + .2) + ")", r.moveTo(i.x, i.y), r.lineTo(n.x, n.y), r.stroke()))
+                }),
+                x(i)
+            }
+            var a, c, u, m = document.createElement("canvas"),
+            d = t(),
+            l = "c_n" + d.l,
+            r = m.getContext("2d"),
+            x = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+            function(n) {
+                window.setTimeout(n, 1e3 / 45)
+            },
+            w = Math.random,
+            y = {
+                x: null,
+                y: null,
+                max: 2e4
+            };
+            m.id = l,
+            m.style.cssText = "position:fixed;top:0;left:0;z-index:" + d.z + ";opacity:" + d.o,
+            e("body")[0].appendChild(m),
+            o(),
+            window.onresize = o,
+            window.onmousemove = function(n) {
+                n = n || window.event,
+                y.x = n.clientX,
+                y.y = n.clientY
+            },
+            window.onmouseout = function() {
+                y.x = null,
+                y.y = null
+            };
+            for (var s = [], f = 0; d.n > f; f++) {
+                var h = w() * a,
+                g = w() * c,
+                v = 2 * w() - 1,
+                p = 2 * w() - 1;
+                s.push({
+                    x: h,
+                    y: g,
+                    xa: v,
+                    ya: p,
+                    max: 6e3
+                })
+            }
+            u = s.concat([y]),
+            setTimeout(function() {
+                i()
+            },
+            100)
+        } ();
+        </script>
+</html>
