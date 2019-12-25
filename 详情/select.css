@@ -182,22 +182,8 @@ ul, menu, dir {
 	text-align: center;
 } */
 .right{
-	width: 60px;
-	height:350px;
-	position: fixed;
-	top: 350px;
-	right: 0px;
-	background-color: black;
-}
-.right li{
-	width: 20px;
-	height: 70px;
-	border-bottom:2px solid #fbffc7;
-	text-align: center;
-}
-.right li img{
-	margin-top: 10px;
-	margin-left: 10px;
+	display: block;
+	float: right;
 }
 
 #bg{
